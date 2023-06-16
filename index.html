@@ -5,8 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Task</title>
+        <!-- Style -->
         <link rel="stylesheet" href="./asset/css/reset.css" />
         <link rel="stylesheet" href="./asset/css/style.css" />
+        <link rel="stylesheet" href="./asset/css/responsive.css" />
         <!-- font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,7 +20,7 @@
         <link
             rel="apple-touch-icon"
             sizes="57x57"
-            href="./asset/favicon//apple-icon-57x57.png"
+            href="./asset/favicon/apple-icon-57x57.png"
         />
         <link
             rel="apple-touch-icon"
@@ -64,7 +66,7 @@
             rel="icon"
             type="image/png"
             sizes="192x192"
-            href="./asset/favicon//android-icon-192x192.png"
+            href="./asset/favicon/android-icon-192x192.png"
         />
         <link
             rel="icon"
@@ -85,14 +87,15 @@
             href="./asset/favicon/favicon-16x16.png"
         />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="msapplication-TileColor" content="#fff" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
         <meta
             name="msapplication-TileImage"
             content="./asset/favicon/ms-icon-144x144.png"
         />
-        <meta name="theme-color" content="#000" />
+        <meta name="theme-color" content="#ffffff" />
     </head>
     <body>
+        <!-- PC header -->
         <header class="header">
             <div class="container">
                 <div class="header-top">
@@ -125,17 +128,57 @@
                     <div class="header-action">
                         <a href="#!" class="btn-singin">Sign In</a>
                     </div>
+                    <!-- Mobile menu -->
+                    <!-- <label for="menu-checkbox" class="toggle-menu">
+                        <svg
+                            width="24"
+                            height="16"
+                            viewBox="0 0 24 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <rect
+                                y="13.7143"
+                                width="24"
+                                height="2.28571"
+                                fill="#9FA2A8"
+                            />
+                            <rect
+                                y="6.85715"
+                                width="24"
+                                height="2.28571"
+                                fill="#9FA2A8"
+                            />
+                            <rect width="24" height="2.28571" fill="#9FA2A8" />
+                        </svg>
+                    </label> -->
+                    <!-- mobile header -->
+                    <header class="mobile-header">
+                        <input
+                            type="checkbox"
+                            name=""
+                            id="menu-checkbox"
+                            class="menu-checkbox"
+                            hidden
+                        />
+                        <!-- Overlay -->
+                        <label for="menu-checkbox" class="menu-overlay"></label>
+
+                        <!-- Menu content -->
+                        <div class="menu-drawer"></div>
+                    </header>
                 </div>
                 <!-- Hero -->
                 <div class="hero">
                     <div class="hero-top">
                         <h1 class="hero__heading">
-                            Make <strong class="highlight">Management</strong> Way
+                            Make
+                            <strong class="highlight">Management</strong> Way
                             More Easier Than Ever
                         </h1>
                         <p class="hero__desc">
-                            The online collaborative management platform to bring
-                            more efficiency and performace
+                            The online collaborative management platform to
+                            bring more efficiency and performace
                         </p>
                         <div class="hero-action">
                             <a href="#!" class="btn hero__btn">Request Demo</a>
@@ -143,25 +186,280 @@
                         </div>
                         <div class="hero-decor">
                             <div class="hero-decor-left">
-                                <img src="./asset/icon/decor-1.svg" alt="" class="hero-left__decor">
-                                <img src="./asset/icon/decor-2.svg" alt="" class="hero-left__decor">
-                                <img src="./asset/icon/decor-3.svg" alt="" class="hero-left__decor">
-                                <img src="./asset/icon/decor-4.svg" alt="" class="hero-left__decor">
+                                <img
+                                    src="./asset/icon/decor-1.svg"
+                                    alt=""
+                                    class="hero-left__decor"
+                                />
+                                <img
+                                    src="./asset/icon/decor-2.svg"
+                                    alt=""
+                                    class="hero-left__decor"
+                                />
+                                <img
+                                    src="./asset/icon/decor-3.svg"
+                                    alt=""
+                                    class="hero-left__decor"
+                                />
+                                <img
+                                    src="./asset/icon/decor-4.svg"
+                                    alt=""
+                                    class="hero-left__decor"
+                                />
                             </div>
                             <div class="hero-decor-right">
-                                <img src="./asset/icon/decor-1.svg" alt="" class="hero-right__decor">
-                                <img src="./asset/icon/decor-2.svg" alt="" class="hero-right__decor">
-                                <img src="./asset/icon/decor-3.svg" alt="" class="hero-right__decor">
-                                <img src="./asset/icon/decor-4.svg" alt="" class="hero-right__decor">
+                                <img
+                                    src="./asset/icon/decor-1.svg"
+                                    alt=""
+                                    class="hero-right__decor"
+                                />
+                                <img
+                                    src="./asset/icon/decor-2.svg"
+                                    alt=""
+                                    class="hero-right__decor"
+                                />
+                                <img
+                                    src="./asset/icon/decor-3.svg"
+                                    alt=""
+                                    class="hero-right__decor"
+                                />
+                                <img
+                                    src="./asset/icon/decor-4.svg"
+                                    alt=""
+                                    class="hero-right__decor"
+                                />
                             </div>
                         </div>
                     </div>
-                    <div class="hero__image-wrap">
-                        <img
-                            src="./asset/img/card.svg"
-                            alt=""
-                            class="hero__img"
-                        />
+                    <div class="hero-inner">
+                        <article class="hero-banner">
+                            <div class="hero-bg-in">
+                                <div class="hero-bar">
+                                    <a href="#!" class="hero-3-line">
+                                        <svg
+                                            width="9"
+                                            height="9"
+                                            viewBox="0 0 9 9"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                width="9"
+                                                height="1"
+                                                fill="#C4C4C4"
+                                            />
+                                            <rect
+                                                y="4"
+                                                width="9"
+                                                height="1"
+                                                fill="#C4C4C4"
+                                            />
+                                            <rect
+                                                y="8"
+                                                width="9"
+                                                height="1"
+                                                fill="#C4C4C4"
+                                            />
+                                        </svg>
+                                    </a>
+                                    <a href="#!" class="hero-dashboard">
+                                        <svg
+                                            width="13"
+                                            height="11"
+                                            viewBox="0 0 13 11"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                width="6"
+                                                height="6"
+                                                rx="1"
+                                                fill="#C4C4C4"
+                                            />
+                                            <rect
+                                                x="7"
+                                                width="6"
+                                                height="4"
+                                                rx="1"
+                                                fill="#C4C4C4"
+                                            />
+                                            <rect
+                                                y="7"
+                                                width="6"
+                                                height="4"
+                                                rx="1"
+                                                fill="#C4C4C4"
+                                            />
+                                            <rect
+                                                x="7"
+                                                y="5"
+                                                width="6"
+                                                height="6"
+                                                rx="1"
+                                                fill="#C4C4C4"
+                                            />
+                                        </svg>
+                                    </a>
+                                    <p class="hero-bar-title">Dashboard</p>
+                                </div>
+                                <div class="hero-site-bar">
+                                    <h4 class="hero-site-bar__heading">
+                                        Collections
+                                    </h4>
+                                    <div
+                                        class="hero-site-bar-row hero-site-bar-active"
+                                    >
+                                        <img
+                                            src="./asset/icon/hero-01.svg"
+                                            alt=""
+                                            class="hero-site-bar-img"
+                                        />
+                                        <p class="hero-site-bar-title">
+                                            School
+                                        </p>
+                                    </div>
+                                    <div class="hero-site-bar-row">
+                                        <img
+                                            src="./asset/icon/hero-02.svg"
+                                            alt=""
+                                            class="hero-site-bar-img"
+                                        />
+                                        <p class="hero-site-bar-title">
+                                            Personal
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-bg-on">
+                                <div class="hero-bg-content">
+                                    <div class="hero-bg-school">
+                                        <a href="#!" class="hero-bg-arrow-icon">
+                                            <svg
+                                                width="4"
+                                                height="7"
+                                                viewBox="0 0 8 15"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M7 1L1 8L7 14"
+                                                    stroke="#D1D1D3"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </a>
+                                        <p class="hero-bg-text-shool">School</p>
+                                    </div>
+                                    <div class="hero-bg-sort">
+                                        <a href="#!" class="hero-bg-sort-icon">
+                                            <svg
+                                                width="10"
+                                                height="5"
+                                                viewBox="0 0 10 5"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M0 0H10V1H0V0ZM1 2H9V3H1V2ZM7 4H3V5H7V4Z"
+                                                    fill="#C4C4C4"
+                                                />
+                                            </svg>
+                                        </a>
+                                        <p class="hero-bg-text-sort">Sort</p>
+                                    </div>
+                                    <div class="hero-task">
+                                        <span class="hero-task-text"
+                                            >Finish the Easay collaboration
+                                        </span>
+                                        <span class="hero-task-text"
+                                            >Do the math for next monday</span
+                                        >
+                                        <span class="hero-task-text"
+                                            >Read the next chapter of the
+                                            book</span
+                                        >
+                                        <span class="hero-task-text"
+                                            >Send the collabaration files to
+                                            jerusha</span
+                                        >
+                                        <span class="hero-task-text"
+                                            >Finish the powerpoint
+                                            presentation</span
+                                        >
+                                        <span
+                                            class="hero-task-text hero-task-add"
+                                            >Add task</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="hero-bg-media">
+                                    <div class="hero-bg-media-top">
+                                        <div class="hero-bg-dots">
+                                            <div class="hero-bg-dot"></div>
+                                            <div class="hero-bg-dot"></div>
+                                            <div class="hero-bg-dot"></div>
+                                        </div>
+                                        <a href="#!" class="hero-bg-contact">
+                                            <svg
+                                                width="26"
+                                                height="19"
+                                                viewBox="0 0 26 19"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    clip-path="url(#clip0_40_511)"
+                                                >
+                                                    <path
+                                                        d="M14.5 9.5H22.375M6.625 9.5C5.72989 9.5 4.87145 9.14442 4.23851 8.51149C3.60558 7.87855 3.25 7.02011 3.25 6.125C3.25 5.22989 3.60558 4.37145 4.23851 3.73851C4.87145 3.10558 5.72989 2.75 6.625 2.75C7.52011 2.75 8.37855 3.10558 9.01149 3.73851C9.64442 4.37145 10 5.22989 10 6.125C10 7.02011 9.64442 7.87855 9.01149 8.51149C8.37855 9.14442 7.52011 9.5 6.625 9.5ZM11.125 16.25V14C11.125 11.4688 9.11463 9.5 6.5845 9.5H6.64525C4.114 9.5 2.125 11.4688 2.125 14V16.25H11.125ZM14.5 3.875H28H14.5ZM14.5 15.125H25.75H14.5Z"
+                                                        stroke="#0CCE84"
+                                                        stroke-width="2"
+                                                    />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_40_511">
+                                                        <rect
+                                                            width="26"
+                                                            height="19"
+                                                            fill="white"
+                                                        />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <h3 class="hero-bg-media__heading">
+                                        Daily task.
+                                    </h3>
+                                    <figure class="hero-bg-media-wrap">
+                                        <img
+                                            src="./asset/img/task.jpg"
+                                            alt=""
+                                            class="hero-bg-media__img"
+                                        />
+                                        <div class="hero-bg-media__play">
+                                            <a
+                                                href="#!"
+                                                class="hero-bg-media__action"
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 384 512"
+                                                >
+                                                    <path
+                                                        d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </article>
                         <article class="hero__card">
                             <div class="hero__card-top">
                                 <p class="hero__row-title">Collections</p>
@@ -361,40 +659,64 @@
                         </div>
                     </article>
                     <article class="stats-media">
-                         <div class="stats-media-row">
+                        <div class="stats-media-row">
                             <!-- stats list 1 -->
-                             <div class="stats-media-list">
+                            <div class="stats-media-list">
                                 <p class="stats-media-title">Online Support</p>
                                 <figure class="stats__img-wrap">
-                                    <img src="./asset/icon/play.svg" alt="" class="stats__img">
+                                    <img
+                                        src="./asset/icon/play.svg"
+                                        alt=""
+                                        class="stats__img"
+                                    />
                                 </figure>
                             </div>
                             <!-- stats list 2 -->
-                             <div class="stats-media-list">
+                            <div class="stats-media-list">
                                 <p class="stats-media-title">Exercitation</p>
                                 <figure class="stats__img-wrap">
-                                    <img src="./asset/icon/location-arrow-solid.svg" alt="" class="stats__img">
+                                    <img
+                                        src="./asset/icon/location-arrow-solid.svg"
+                                        alt=""
+                                        class="stats__img"
+                                    />
                                 </figure>
                             </div>
                             <!-- stats list 3 -->
                             <div class="stats-media-list">
                                 <p class="stats-media-title">Design</p>
                                 <figure class="stats__img-wrap">
-                                    <img src="./asset/icon/action icon-3.svg" alt="" class="stats__img">
+                                    <img
+                                        src="./asset/icon/action icon-3.svg"
+                                        alt=""
+                                        class="stats__img"
+                                    />
                                 </figure>
-                            </div> 
+                            </div>
                             <!-- stats list 4 -->
-                             <div class="stats-media-list">
-                                <figure class="stats__img-wrap icon-bottom ">
-                                    <img src="./asset/icon/play.svg" alt="" class="stats__img ">
+                            <div class="stats-media-list">
+                                <figure class="stats__img-wrap icon-bottom">
+                                    <img
+                                        src="./asset/icon/play.svg"
+                                        alt=""
+                                        class="stats__img"
+                                    />
                                 </figure>
                                 <p class="stats-media-title">D’ task</p>
                                 <div class="stats-avatar-group">
-                                    <img src="./asset/img/avatar-01.jpg" alt="" class="stats-avatar">
-                                    <img src="./asset/img/avatar-02.jpg" alt="" class="stats-avatar">
+                                    <img
+                                        src="./asset/img/avatar-01.jpg"
+                                        alt=""
+                                        class="stats-avatar"
+                                    />
+                                    <img
+                                        src="./asset/img/avatar-02.jpg"
+                                        alt=""
+                                        class="stats-avatar"
+                                    />
                                 </div>
                             </div>
-                         </div>
+                        </div>
                         <div class="stats-decor-circle">
                             <div class="stats-circle-in"></div>
                             <div class="stats-circle-on"></div>
